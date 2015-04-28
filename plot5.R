@@ -139,8 +139,7 @@ png(file = "plot5.png",
 df <- NEI %>%
         filter(fips == "24510" & type == "ON-ROAD") %>%
             group_by(year) %>%
-                summarize(emissions = sum(Emissions)) %>%
-                    data.frame()
+                summarize(emissions = sum(Emissions))
 
 g <- ggplot(df, aes(x=factor(year), y=emissions)) +
      geom_bar(fill="cornflowerblue", stat="identity") +

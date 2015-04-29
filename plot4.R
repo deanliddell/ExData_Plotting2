@@ -30,7 +30,7 @@ if (file.exists("summarySCC_PM25.rds") &
     #
     archiveUrl <- 
         "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip"
-    archiveFile <- "exdata_data_NEI_data.zip"
+    archiveFile <- basename(archiveUrl)
     filePath <- file.path(getwd(), archiveFile)
     download.file(url = archiveUrl, destfile = filePath, method = "curl")
     if (file.exists(archiveFile)) {
